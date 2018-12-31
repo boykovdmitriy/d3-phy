@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+.pie-left {
+  animation: rotation-left 10s infinite linear;
+}
+
+.size-animation {
+  animation: size 5s infinite ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes size {
+  0%   {stroke-width: 0;}
+  70%  {stroke-width: 10px;}
+  100%   {stroke-width: 0;}
+}
+
+@-webkit-keyframes rotation-left {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+.pie-right {
+  -webkit-animation: rotation-right 15s infinite linear;
+}
+
+@-webkit-keyframes rotation-right {
+  from {
+    -webkit-transform: rotate(359deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+  }
+}
